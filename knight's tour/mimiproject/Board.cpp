@@ -1,4 +1,7 @@
 #include "Board.h"
+#include <iostream>
+#include <string>
+using namespace std;
 
 void Board::legalMoves(int currentRow, int currentCol)
 {
@@ -35,7 +38,6 @@ void Board::legalMoves(int currentRow, int currentCol)
             {
                 cout << arr[r][c];
             }
-
             cout << endl;
         }
         cout << endl;
@@ -51,7 +53,7 @@ void Board::legalMoves(int currentRow, int currentCol)
             moves[move - 1].row = row;
             moves[move - 1].col = col;
             cout << move << "." << " board[" << row << "][" << col << "] or \n";
-            arr[row][col] = "[L]";
+            arr[row][col] = "[" + to_string(move) + ']';
             move++;
         }
 
@@ -61,7 +63,7 @@ void Board::legalMoves(int currentRow, int currentCol)
             moves[move - 1].row = row;
             moves[move - 1].col = col;
             cout << move << "." << " board[" << row << "][" << col << "] or \n";
-            arr[row][col] = "[L]";
+            arr[row][col] = "[" + to_string(move) + ']';
             move++;
         }
 
@@ -72,7 +74,7 @@ void Board::legalMoves(int currentRow, int currentCol)
             moves[move - 1].row = row;
             moves[move - 1].col = col;
             cout << move << "." << " board[" << row << "][" << col << "] or \n";
-            arr[row][col] = "[L]";
+            arr[row][col] = "[" + to_string(move) + ']';
             move++;
         }
         row = currentRow + 2; col = currentCol + 1;
@@ -81,7 +83,7 @@ void Board::legalMoves(int currentRow, int currentCol)
             moves[move - 1].row = row;
             moves[move - 1].col = col;
             cout << move << "." << " board[" << row << "][" << col << "] or \n";
-            arr[row][col] = "[L]";
+            arr[row][col] = "[" + to_string(move) + ']';
             move++;
         }
 
@@ -92,7 +94,7 @@ void Board::legalMoves(int currentRow, int currentCol)
             moves[move - 1].row = row;
             moves[move - 1].col = col;
             cout << move << "." << " board[" << row << "][" << col << "] or \n";
-            arr[row][col] = "[L]";
+            arr[row][col] = "[" + to_string(move) + ']';
             move++;
         }
         row = currentRow + 1; col = currentCol - 2;
@@ -101,7 +103,7 @@ void Board::legalMoves(int currentRow, int currentCol)
             moves[move - 1].row = row;
             moves[move - 1].col = col;
             cout << move << "." << " board[" << row << "][" << col << "] or \n";
-            arr[row][col] = "[L]";
+            arr[row][col] = "[" + to_string(move) + ']';
             move++;
         }
 
@@ -112,7 +114,7 @@ void Board::legalMoves(int currentRow, int currentCol)
             moves[move - 1].row = row;
             moves[move - 1].col = col;
             cout << move << "." << " board[" << row << "][" << col << "] or \n";
-            arr[row][col] = "[L]";
+            arr[row][col] = "[" + to_string(move) + ']';
             move++;
         }
         row = currentRow - 2; col = currentCol - 1;
@@ -121,13 +123,11 @@ void Board::legalMoves(int currentRow, int currentCol)
             moves[move - 1].row = row;
             moves[move - 1].col = col;
             cout << move << "." << " board[" << row << "][" << col << "] or \n";
-            arr[row][col] = "[L]";
+            arr[row][col] = "[" + to_string(move) + ']';
             move++;
         }
         cout << endl;
 
-        // Show the board with all legal moves from the current position
-        // Legal moves will be indicated as 'L'
         cout << "  0  1  2  3  4  5  6  7\n";
         for (int r = 0; r < ROWS; r++)
         {
