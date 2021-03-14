@@ -1,4 +1,4 @@
-﻿#ifndef BOARD_H
+#ifndef BOARD_H
 #define BOARD_H
 #include <iostream>
 #include <string>
@@ -17,7 +17,7 @@ private:
     int move = 1;
 
 public:
-    Board(){}
+
     void legalMoves(int currentRow, int currentCol);
    
 };
