@@ -1,0 +1,6 @@
+﻿  Board.cpp
+C:\Users\ricDo\source\repos\battleship\Battleship\Board.cpp(48,15): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\ricDo\source\repos\battleship\Battleship\Board.cpp(106,9): warning C4101: 'num': unreferenced local variable
+  Source.cpp
+  Generating Code...
+  Battleship.vcxproj -> C:\Users\ricDo\source\repos\battleship\Debug\Battleship.exe
